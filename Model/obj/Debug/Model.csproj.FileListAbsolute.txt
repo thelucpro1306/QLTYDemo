@@ -1,0 +1,24 @@
+C:\Users\THE LUC\Desktop\ShopOnline\Model\bin\Debug\Model.dll.config
+C:\Users\THE LUC\Desktop\ShopOnline\Model\bin\Debug\Model.dll
+C:\Users\THE LUC\Desktop\ShopOnline\Model\bin\Debug\Model.pdb
+C:\Users\THE LUC\Desktop\ShopOnline\Model\bin\Debug\EntityFramework.dll
+C:\Users\THE LUC\Desktop\ShopOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\THE LUC\Desktop\ShopOnline\Model\bin\Debug\EntityFramework.xml
+C:\Users\THE LUC\Desktop\ShopOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\THE LUC\Desktop\ShopOnline\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\THE LUC\Desktop\ShopOnline\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\THE LUC\Desktop\ShopOnline\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\THE LUC\Desktop\ShopOnline\Model\obj\Debug\Model.dll
+C:\Users\THE LUC\Desktop\ShopOnline\Model\obj\Debug\Model.pdb
+C:\Users\hatha\Desktop\ShopOnline\Model\bin\Debug\Model.dll.config
+C:\Users\hatha\Desktop\ShopOnline\Model\bin\Debug\Model.dll
+C:\Users\hatha\Desktop\ShopOnline\Model\bin\Debug\Model.pdb
+C:\Users\hatha\Desktop\ShopOnline\Model\bin\Debug\EntityFramework.dll
+C:\Users\hatha\Desktop\ShopOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hatha\Desktop\ShopOnline\Model\bin\Debug\EntityFramework.xml
+C:\Users\hatha\Desktop\ShopOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.dll
+C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.pdb
