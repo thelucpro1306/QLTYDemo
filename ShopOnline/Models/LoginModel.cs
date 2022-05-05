@@ -8,6 +8,7 @@ namespace ShopOnline.Models
 {
     public class LoginModel
     {
+        [Key]
         [Required(ErrorMessage = "Required")]
         public string Username { get; set; }
 

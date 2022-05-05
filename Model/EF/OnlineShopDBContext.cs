@@ -82,5 +82,7 @@ namespace Model.EF
                 .Property(e => e.Password)
                 .IsUnicode(false);
         }
+
+       
     }
 }

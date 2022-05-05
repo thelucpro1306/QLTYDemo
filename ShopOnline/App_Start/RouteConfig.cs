@@ -16,18 +16,29 @@ namespace ShopOnline
             new { botdetect = @"(.*)BotDetectCaptcha\.ashx" });
 
             routes.MapRoute(
+               name: "Register",
+               url: "dang-ky",
+               new { controller = "User", action = "Register", id = UrlParameter.Optional },
+               namespaces: new[] { "ShopOnline.Controllers" }
+           );
+
+            routes.MapRoute(
+               name: "Login",
+               url: "dang-nhap",
+               new { controller = "User", action = "Login", id = UrlParameter.Optional },
+               namespaces: new[] { "ShopOnline.Controllers" }
+           );
+
+            routes.MapRoute(
                 "Default",
                 "{controller}/{action}/{id}",
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "ShopOnline.Controllers" }
             );
 
-            routes.MapRoute(
-                name: "Register",
-                url: "dang-ky",
-                new { controller = "User", action = "Register", id = UrlParameter.Optional },
-                namespaces: new[] { "ShopOnline.Controllers" }
-            );
+
+
+           
 
             
         }
