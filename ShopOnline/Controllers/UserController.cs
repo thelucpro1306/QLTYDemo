@@ -39,7 +39,7 @@ namespace ShopOnline.Controllers
                     userSession.UserName = model.Username;
                     userSession.ID = user.ID;
                     Session.Add(ConstantsCommon.USER_SESSION, userSession);
-                    return RedirectToAction("/");
+                    return RedirectToAction("Index","Home");
                 }
                 else
                 {
