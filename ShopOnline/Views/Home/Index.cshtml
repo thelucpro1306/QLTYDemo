@@ -1,4 +1,4 @@
-﻿
+﻿@model ShopOnline.Models.AppointmentModel
 @{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -154,6 +154,59 @@
     </div>
     <hr class="my-4">
 </div>
+
+
+<!-- .page-section -->
+
+<div id="page-section" class="page-section">
+    <div class="container">
+        <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "main-form" }))
+        {
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            if (ViewBag.Success != null)
+            {
+                <div class="alert alert-success">@ViewBag.Success</div>
+            }
+            <div class="row mt-5 ">
+                <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
+                    @*<input type="text" class="form-control" placeholder="Full name">*@
+                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Full name" })
+                    @*@Html.ValidationMessageFor(model => model.Name,"", new {@class = "text-danger"})*@
+                </div>
+                <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+                    @*<input type="text" class="form-control" placeholder="Email address..">*@
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Email address", @type = "email" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
+                    @Html.TextBoxFor(model => model.BookingDate, new { @class = "form-control", @type = "date" })
+                    @Html.ValidationMessageFor(model => model.BookingDate, "", new { @class = "text-danger" })
+                </div>
+                @*<div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+                    <select name="departement" id="departement" class="custom-select">
+                        <option value="general">General Health</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="dental">Dental</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="orthopaedics">Orthopaedics</option>
+                    </select>
+                </div>*@
+                <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+                    @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", @type = "text", @placeholder = "Phone number" })
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+
+                    @Html.TextAreaFor(model => model.Note, new { @class = "form-control", @name = "message", @rows = 6, @placeholder = "Enter message..." })
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary col-md-12 wow zoomIn">Submit Request</button>
+        }
+    </div>
+</div> <!-- .page-section -->
+<hr />
+<br />
 <div class="container-fluid padding">
     <div class="row text-center padding">
         <div class="col-12">

@@ -13,5 +13,10 @@ namespace ShopOnline.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public ActionResult SurgicalServices()
+        {
+            return View();
+        }
     }
 }

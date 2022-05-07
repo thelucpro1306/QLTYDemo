@@ -49,6 +49,13 @@ namespace ShopOnline.Controllers
             return View(model);
         }
 
+        public ActionResult Logout()
+        {
+            Session[ConstantsCommon.USER_SESSION] = null;
+            return Redirect("/");
+            
+        }
+
         [HttpPost]
         [CaptchaValidationActionFilter("CaptchaCode", "registerCaptcha", "Wrong Captcha!")]
         public ActionResult Register(RegisterModel model)
