@@ -11,10 +11,11 @@ namespace ShopOnline.Controllers
 {
     public class HomeController : Controller
     {
+        OnlineShopDBContext context = new OnlineShopDBContext();
         // GET: Home
         public ActionResult Index()
         {
-            OnlineShopDBContext context = new OnlineShopDBContext();
+            
             Apointment apointment = new Apointment();
             apointment.list = context.Servicesses.ToList();           
             return View(apointment);
@@ -34,9 +35,14 @@ namespace ShopOnline.Controllers
                 appointmentModel.BookingDate = model.BookingDate;
                 appointmentModel.DateCreate = DateTime.Now;
                 appointmentModel.ServicesId = model.ServicesId;
-                if (model.BookingDate <= DateTime.Now)
+                model.list = context.Servicesses.ToList();
+                var dt = model.BookingDate;
+                var dtnow = DateTime.Now;
+                var res = DateTime.Compare((DateTime)dt,dtnow);
+                if (res<0 || res == 0)
                 {
                     ModelState.AddModelError("", "please, check your clinic date ( the date must be higher than the present day) ");
+                    return View(model);
                 }                
                 AppointmentDao dao = new AppointmentDao();
                 var rs = dao.Insert(appointmentModel);
@@ -49,7 +55,7 @@ namespace ShopOnline.Controllers
                 {
                     ModelState.AddModelError("","Error");
                 }
-            }
+            }            
             return View(model);
         }
 
