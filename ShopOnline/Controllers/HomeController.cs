@@ -14,11 +14,14 @@ namespace ShopOnline.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            OnlineShopDBContext context = new OnlineShopDBContext();
+            Apointment apointment = new Apointment();
+            apointment.list = context.Servicesses.ToList();           
+            return View(apointment);
         }
 
         [HttpPost]
-        public ActionResult Index(AppointmentModel model)
+        public ActionResult Index(Apointment model)
         {
             if (ModelState.IsValid)
             {
@@ -30,20 +33,17 @@ namespace ShopOnline.Controllers
                 appointmentModel.status = -1;
                 appointmentModel.BookingDate = model.BookingDate;
                 appointmentModel.DateCreate = DateTime.Now;
+                appointmentModel.ServicesId = model.ServicesId;
+                if (model.BookingDate <= DateTime.Now)
+                {
+                    ModelState.AddModelError("", "please, check your clinic date ( the date must be higher than the present day) ");
+                }                
                 AppointmentDao dao = new AppointmentDao();
                 var rs = dao.Insert(appointmentModel);
                 if(rs > 0)
                 {
-                    if(model.BookingDate <= DateTime.Now)
-                    {
-                        ModelState.AddModelError("", "please, check your clinic date ( the date must be higher than the present day) ");
-                    }
-                    else
-                    {
-                        model = new AppointmentModel();
                         ViewBag.Success = "Success!";
-                        return RedirectToAction("Index", "Thanks");
-                    }
+                        return Redirect("#page-section");                   
                 }
                 else
                 {

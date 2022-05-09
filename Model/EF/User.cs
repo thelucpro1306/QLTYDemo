@@ -9,6 +9,12 @@ namespace Model.EF
     [Table("User")]
     public partial class User
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
+        {
+            Apointments = new HashSet<Apointment>();
+        }
+
         public long ID { get; set; }
 
         [Required]
@@ -38,5 +44,8 @@ namespace Model.EF
         public string ModifiedBy { get; set; }
 
         public bool Status { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Apointment> Apointments { get; set; }
     }
 }

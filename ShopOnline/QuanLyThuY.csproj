@@ -155,9 +155,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AppointmentModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\ServicesModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -5728,7 +5728,6 @@
     <Content Include="Areas\Admin\Views\User\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Services\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Services\SurgicalServices.cshtml" />
-    <Content Include="Areas\Admin\Views\AppointmentConfirm\Index.cshtml" />
     <Content Include="Assets\Admin\src\scss\custom.scss" />
     <Content Include="Assets\Admin\src\scss\daterangepicker.scss" />
     <Content Include="Assets\Admin\vendors\animate.css\.bower.json" />
@@ -6759,6 +6758,7 @@
     <Content Include="Assets\Admin\vendors\validator\.bower.json" />
     <Content Include="Assets\Admin\vendors\validator\package.json" />
     <Content Include="Assets\Admin\vendors\validator\README.md" />
+    <Content Include="Areas\Admin\Views\AppointmentConfirm\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -6779,12 +6779,12 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\MainMenu.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Thanks\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

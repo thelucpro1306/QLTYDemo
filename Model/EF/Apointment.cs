@@ -14,13 +14,14 @@ namespace Model.EF
         [Column(TypeName = "date")]
         public DateTime? BookingDate { get; set; }
 
-        [StringLength(250)]
-        public string Type { get; set; }
+        public TimeSpan? BookingTime { get; set; }
+
+        public long? ServicesId { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Note { get; set; }
 
-        public int? CustumerID { get; set; }
+        public long? CustumerID { get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }
@@ -34,5 +35,12 @@ namespace Model.EF
         public int? status { get; set; }
 
         public DateTime? DateCreate { get; set; }
+
+        public virtual Servicess Servicess { get; set; }
+
+        public virtual User User { get; set; }
+
+        public List<Servicess> list = new List<Servicess>();
+
     }
 }

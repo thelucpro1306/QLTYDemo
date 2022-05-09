@@ -24,7 +24,10 @@ namespace Model.EF
         public virtual DbSet<MenuType> MenuTypes { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+        public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<Servicess> Servicesses { get; set; }
         public virtual DbSet<Slide> Slides { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<SystemConfig> SystemConfigs { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -71,6 +74,23 @@ namespace Model.EF
                 .Property(e => e.MetaTitle)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Service>()
+                .Property(e => e.ServicesName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Service>()
+                .Property(e => e.Cost)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<Servicess>()
+                .Property(e => e.Name)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Servicess>()
+                .HasMany(e => e.Apointments)
+                .WithOptional(e => e.Servicess)
+                .HasForeignKey(e => e.ServicesId);
+
             modelBuilder.Entity<Slide>()
                 .Property(e => e.Link)
                 .IsUnicode(false);
@@ -90,6 +110,11 @@ namespace Model.EF
             modelBuilder.Entity<User>()
                 .Property(e => e.Password)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Apointments)
+                .WithOptional(e => e.User)
+                .HasForeignKey(e => e.CustumerID);
         }
     }
 }

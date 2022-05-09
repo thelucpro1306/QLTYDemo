@@ -9,11 +9,12 @@ namespace Model.DAO
 {
     public class AppointmentDao
     {
-        OnlineShopDBContext db = new OnlineShopDBContext();
+        OnlineShopDBContext db = null;
         public AppointmentDao()
         {
-            
+            db = new OnlineShopDBContext();
         }
+
 
         public long Insert(Apointment apointment)
         {
