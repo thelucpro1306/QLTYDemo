@@ -19,5 +19,9 @@ namespace ShopOnline.Controllers
             return View();
         }
 
+        public ActionResult PreventativeServices()
+        {
+            return View();
+        }
     }
 }

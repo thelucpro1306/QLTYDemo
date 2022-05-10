@@ -13383,6 +13383,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Service\SurgicalServices.cshtml" />
+    <Content Include="Views\Service\PreventativeServices.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
