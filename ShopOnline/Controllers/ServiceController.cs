@@ -22,6 +22,36 @@ namespace ShopOnline.Controllers
         public ActionResult PreventativeServices()
         {
             return View();
+
+        }
+        public ActionResult AdditionalServices()
+        {
+            return View();
+        }
+        public ActionResult PatientMonitoring()
+        {
+            return View();
+        }
+        public ActionResult PetWellness()
+        {
+            return View();
+        }
+
+        public ActionResult NutritionalCounselings()
+        {
+            return View();
+        }
+        public ActionResult Grooming()
+        {
+            return View();
+        }
+        public ActionResult ScreeningTest()
+        {
+            return View();
+        }
+        public ActionResult PetSupplies()
+        {
+            return View();
         }
     }   
 }
