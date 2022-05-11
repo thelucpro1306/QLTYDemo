@@ -13,7 +13,7 @@ namespace ShopOnline.Areas.Admin.Controllers
         // GET: Admin/AppointmentConfirm
         public ActionResult Index()
         {
-            var list = db.Apointments.ToList();
+            var list = db.Apointment.ToList();
             return View(list);
         }
 

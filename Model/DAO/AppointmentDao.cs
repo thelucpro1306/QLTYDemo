@@ -18,7 +18,7 @@ namespace Model.DAO
 
         public long Insert(Apointment apointment)
         {
-            db.Apointments.Add(apointment);
+            db.Apointment.Add(apointment);
             db.SaveChanges();            
             return apointment.Id;
         }

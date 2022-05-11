@@ -12,7 +12,7 @@ namespace Model.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            Apointments = new HashSet<Apointment>();
+            Apointment = new HashSet<Apointment>();
         }
 
         public long ID { get; set; }
@@ -46,6 +46,6 @@ namespace Model.EF
         public bool Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Apointment> Apointments { get; set; }
+        public virtual ICollection<Apointment> Apointment { get; set; }
     }
 }

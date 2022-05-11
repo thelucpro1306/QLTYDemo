@@ -12,25 +12,24 @@ namespace Model.EF
         {
         }
 
-        public virtual DbSet<About> Abouts { get; set; }
-        public virtual DbSet<Apointment> Apointments { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Contact> Contacts { get; set; }
-        public virtual DbSet<Content> Contents { get; set; }
-        public virtual DbSet<ContentTag> ContentTags { get; set; }
-        public virtual DbSet<Feedback> Feedbacks { get; set; }
-        public virtual DbSet<Footer> Footers { get; set; }
-        public virtual DbSet<Menu> Menus { get; set; }
-        public virtual DbSet<MenuType> MenuTypes { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
-        public virtual DbSet<Service> Services { get; set; }
-        public virtual DbSet<Servicess> Servicesses { get; set; }
-        public virtual DbSet<Slide> Slides { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<SystemConfig> SystemConfigs { get; set; }
-        public virtual DbSet<Tag> Tags { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<About> About { get; set; }
+        public virtual DbSet<Apointment> Apointment { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Contact> Contact { get; set; }
+        public virtual DbSet<Content> Content { get; set; }
+        public virtual DbSet<ContentTag> ContentTag { get; set; }
+        public virtual DbSet<Feedback> Feedback { get; set; }
+        public virtual DbSet<Footer> Footer { get; set; }
+        public virtual DbSet<Menu> Menu { get; set; }
+        public virtual DbSet<MenuType> MenuType { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategory { get; set; }
+        public virtual DbSet<Services> Services { get; set; }
+        public virtual DbSet<Servicess> Servicess { get; set; }
+        public virtual DbSet<Slide> Slide { get; set; }
+        public virtual DbSet<SystemConfig> SystemConfig { get; set; }
+        public virtual DbSet<Tag> Tag { get; set; }
+        public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -74,11 +73,11 @@ namespace Model.EF
                 .Property(e => e.MetaTitle)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Service>()
+            modelBuilder.Entity<Services>()
                 .Property(e => e.ServicesName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Service>()
+            modelBuilder.Entity<Services>()
                 .Property(e => e.Cost)
                 .HasPrecision(18, 0);
 
@@ -87,7 +86,7 @@ namespace Model.EF
                 .IsFixedLength();
 
             modelBuilder.Entity<Servicess>()
-                .HasMany(e => e.Apointments)
+                .HasMany(e => e.Apointment)
                 .WithOptional(e => e.Servicess)
                 .HasForeignKey(e => e.ServicesId);
 
@@ -112,7 +111,7 @@ namespace Model.EF
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .HasMany(e => e.Apointments)
+                .HasMany(e => e.Apointment)
                 .WithOptional(e => e.User)
                 .HasForeignKey(e => e.CustumerID);
         }

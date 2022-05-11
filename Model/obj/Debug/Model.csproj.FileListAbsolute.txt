@@ -22,3 +22,14 @@ C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.csproj.CoreCompileInputs
 C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.dll
 C:\Users\hatha\Desktop\ShopOnline\Model\obj\Debug\Model.pdb
+C:\Users\nhat\Desktop\QLTYDemo\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\nhat\Desktop\QLTYDemo\Model\obj\Debug\Model.dll
+C:\Users\nhat\Desktop\QLTYDemo\Model\obj\Debug\Model.pdb
+C:\Users\nhat\Desktop\QLTYDemo\Model\bin\Debug\Model.dll.config
+C:\Users\nhat\Desktop\QLTYDemo\Model\bin\Debug\Model.dll
+C:\Users\nhat\Desktop\QLTYDemo\Model\bin\Debug\Model.pdb
+C:\Users\nhat\Desktop\QLTYDemo\Model\bin\Debug\EntityFramework.dll
+C:\Users\nhat\Desktop\QLTYDemo\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nhat\Desktop\QLTYDemo\Model\bin\Debug\EntityFramework.xml
+C:\Users\nhat\Desktop\QLTYDemo\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nhat\Desktop\QLTYDemo\Model\obj\Debug\Model.csproj.CopyComplete

@@ -17,7 +17,7 @@ namespace ShopOnline.Controllers
         {
             
             Apointment apointment = new Apointment();
-            apointment.list = context.Servicesses.ToList();           
+            apointment.list = context.Servicess.ToList();           
             return View(apointment);
         }
 
@@ -35,7 +35,7 @@ namespace ShopOnline.Controllers
                 appointmentModel.BookingDate = model.BookingDate;
                 appointmentModel.DateCreate = DateTime.Now;
                 appointmentModel.ServicesId = model.ServicesId;
-                model.list = context.Servicesses.ToList();
+                model.list = context.Servicess.ToList();
                 var dt = model.BookingDate;
                 var dtnow = DateTime.Now;
                 var res = DateTime.Compare((DateTime)dt,dtnow);

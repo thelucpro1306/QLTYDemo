@@ -12,11 +12,11 @@ namespace Model.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Servicess()
         {
-            Apointments = new HashSet<Apointment>();
+            Apointment = new HashSet<Apointment>();
         }
 
         public long id { get; set; }
-        [Display(Name ="Services Name")]
+
         [StringLength(10)]
         public string Name { get; set; }
 
@@ -25,10 +25,10 @@ namespace Model.EF
         [Column(TypeName = "ntext")]
         public string Description { get; set; }
 
+        [Column(TypeName = "image")]
+        public byte[] Image { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Apointment> Apointments { get; set; }
-
-        
-
+        public virtual ICollection<Apointment> Apointment { get; set; }
     }
 }

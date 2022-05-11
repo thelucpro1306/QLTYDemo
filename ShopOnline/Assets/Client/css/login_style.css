@@ -8,7 +8,7 @@ html, body {
 	font-weight: bold;
 }
 .bg {
-	background: url(login_background1.webp);
+	background: url("/Assets/Client/images/carousel2.jpg");
 	background-size: cover;
 	width: 100%;
 	height: 100%;

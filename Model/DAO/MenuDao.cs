@@ -17,7 +17,7 @@ namespace Model.DAO
 
         public List<Menu> ListByGroupID(int group)
         {
-            return db.Menus.Where(x=>x.TypeID == group).ToList();
+            return db.Menu.Where(x=>x.TypeID == group).ToList();
         }
 
     }
