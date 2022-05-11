@@ -88,3 +88,7 @@ C:\Users\hatha\Desktop\ShopOnline\ShopOnline\obj\Debug\QuanLyThuY.csproj.CoreCom
 C:\Users\hatha\Desktop\ShopOnline\ShopOnline\obj\Debug\QuanLyThuY.csproj.CopyComplete
 C:\Users\hatha\Desktop\ShopOnline\ShopOnline\obj\Debug\ShopOnline.dll
 C:\Users\hatha\Desktop\ShopOnline\ShopOnline\obj\Debug\ShopOnline.pdb
+C:\Users\hatha\Desktop\ShopOnline\ShopOnline\bin\PagedList.dll
+C:\Users\hatha\Desktop\ShopOnline\ShopOnline\bin\PagedList.Mvc.dll
+C:\Users\hatha\Desktop\ShopOnline\ShopOnline\bin\PagedList.xml
+C:\Users\hatha\Desktop\ShopOnline\ShopOnline\bin\PagedList.Mvc.xml

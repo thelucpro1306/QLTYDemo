@@ -12,8 +12,8 @@ namespace Model.EF
         public long Id { get; set; }
         [Required(ErrorMessage = "Date is required")]
         [Column(TypeName = "date")]
-        public DateTime? BookingDate { get; set; }
-        
+        public DateTime BookingDate { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString ="{0:MM-yyyy-dd}")]
         public TimeSpan? BookingTime { get; set; }
         
         public long? ServicesId { get; set; }

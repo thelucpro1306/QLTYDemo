@@ -61,6 +61,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SQLite, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -148,6 +154,7 @@
     <Compile Include="Common\ConstantsCommon.cs" />
     <Compile Include="Common\Encryptor.cs" />
     <Compile Include="Common\UserLogin.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\ThanksController.cs" />
@@ -10937,6 +10944,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -13355,6 +13363,10 @@
     <Content Include="Assets\Client\vendors\validator\.bower.json" />
     <Content Include="Assets\Client\vendors\validator\package.json" />
     <Content Include="Assets\Client\vendors\validator\README.md" />
+    <Content Include="Areas\Admin\Views\AppointmentConfirm\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AppointmentConfirm\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AppointmentConfirm\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AppointmentConfirm\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -13384,6 +13396,7 @@
     <Content Include="Views\Service\Index.cshtml" />
     <Content Include="Views\Service\SurgicalServices.cshtml" />
     <Content Include="Views\Service\PreventativeServices.cshtml" />
+    <Content Include="Views\Appointment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
