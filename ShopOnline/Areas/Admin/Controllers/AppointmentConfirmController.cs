@@ -14,7 +14,7 @@ namespace ShopOnline.Areas.Admin.Controllers
         // GET: Admin/AppointmentConfirm
         public ActionResult Index(string searchString,int page = 1,int pageSize=10)
         {
-            var dao = new AppointmentDao();
+            var dao = new AppoimentDao();
             var list = dao.ListAllPaging( searchString,page, pageSize);
             ViewBag.SearchString = searchString;
             return View(list);
@@ -39,11 +39,11 @@ namespace ShopOnline.Areas.Admin.Controllers
                 appointmentModel.Note = model.Note;
                 appointmentModel.status = -1;             
                 appointmentModel.BookingDate = model.BookingDate;
-                appointmentModel.BookingDate.ToShortDateString();
+                
                 appointmentModel.DateCreate = DateTime.Now;
                 appointmentModel.ServicesId = model.ServicesId;
                 
-                var dt = model.BookingDate;
+                var dt = model.BookingDate; 
                 var dtnow = DateTime.Now;
                 var res = DateTime.Compare((DateTime)dt, dtnow);
                 if (res < 0 || res == 0)
@@ -51,7 +51,7 @@ namespace ShopOnline.Areas.Admin.Controllers
                     ModelState.AddModelError("", "please, check your clinic date ( the date must be higher than the present day) ");
                     return View(model);
                 }
-                AppointmentDao dao = new AppointmentDao();
+                AppoimentDao dao = new AppoimentDao();
                 var rs = dao.Insert(appointmentModel);
                 if (rs > 0)
                 {
@@ -70,11 +70,7 @@ namespace ShopOnline.Areas.Admin.Controllers
         {
             var details = db.Apointments.Where(n=>n.Id.Equals(id)).FirstOrDefault();
             return View(details);
-        }
-
-
-
-        
+        }        
         public ActionResult Delete(int id)
         {
             var Delete = db.Apointments.Where(n => n.Id.Equals(id)).FirstOrDefault();
@@ -122,7 +118,7 @@ namespace ShopOnline.Areas.Admin.Controllers
                     ModelState.AddModelError("", "please, check your clinic date ( the date must be higher than the present day) ");
                     return View(model);
                 }
-                AppointmentDao dao = new AppointmentDao();
+                AppoimentDao dao = new AppoimentDao();
                 var rs = dao.Insert(appointmentModel);
                 if (rs > 0)
                 {

@@ -59,9 +59,7 @@
                 <th>
                     Email
                 </th>
-                <th>
-                    Create Time
-                </th>
+
                 <th>
                     Action
                 </th>
@@ -69,13 +67,15 @@
 
             @foreach (var item in Model)
             {
+                
+                
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.Servicess.Name)
                     </td>
 
                     <td>
-                        @Html.DisplayFor(modelItem => item.BookingDate)
+                        @Html.Label(((DateTime)item.BookingDate).ToString("MM / dd / yyyy"))
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.BookingTime)
@@ -89,9 +89,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Email)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DateCreate)
-                    </td>
+
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new {@class = "pl-3 pr-4 mr-1 btn btn-primary",}) 
                         @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "mr-1 btn btn-success", }) 

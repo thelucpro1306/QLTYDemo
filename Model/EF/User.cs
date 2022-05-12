@@ -13,6 +13,7 @@ namespace Model.EF
         public User()
         {
             Apointments = new HashSet<Apointment>();
+            Clients = new HashSet<Client>();
         }
 
         public long ID { get; set; }
@@ -47,5 +48,10 @@ namespace Model.EF
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Apointment> Apointments { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Client> Clients { get; set; }
+
+        public string Phone { get; set; }
     }
 }

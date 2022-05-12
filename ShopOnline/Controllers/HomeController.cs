@@ -44,7 +44,7 @@ namespace ShopOnline.Controllers
                     ModelState.AddModelError("", "please, check your clinic date ( the date must be higher than the present day) ");
                     return View(model);
                 }                
-                AppointmentDao dao = new AppointmentDao();
+                AppoimentDao dao = new AppoimentDao();
                 var rs = dao.Insert(appointmentModel);
                 if(rs > 0)
                 {

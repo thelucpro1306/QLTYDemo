@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using PagedList;
 namespace Model.DAO
 {
-    public class AppointmentDao
+    public class AppoimentDao
     {
         OnlineShopDBContext db = null;
-        public AppointmentDao()
+        public AppoimentDao()
         {
             db = new OnlineShopDBContext();
         }

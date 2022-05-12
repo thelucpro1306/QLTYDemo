@@ -52,8 +52,7 @@ namespace ShopOnline.Controllers
         public ActionResult Logout()
         {
             Session[ConstantsCommon.USER_SESSION] = null;
-            return Redirect("/");
-            
+            return Redirect("/");           
         }
 
         [HttpPost]
@@ -72,6 +71,8 @@ namespace ShopOnline.Controllers
                 else
                 {
                     var user = new User();
+                    var client = new Client();
+                    var daoC = new ClientDao();
                     user.UserName = model.Username; 
                     user.Name = model.name;
                     user.Password = Encryptor.MD5Hash(model.Password);
@@ -83,6 +84,10 @@ namespace ShopOnline.Controllers
                     {
                         ViewBag.Success = "Dang ky thanh cong";
                         model = new RegisterModel();
+                        client.Name = user.Name;
+                        client.email = user.Email;
+                        client.Phone = user.Phone;
+                        daoC.Insert(client);
                         return RedirectToAction("Index","Home");
                     }
                     else

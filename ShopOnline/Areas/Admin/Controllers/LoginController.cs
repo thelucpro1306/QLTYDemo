@@ -16,7 +16,14 @@ namespace ShopOnline.Areas.Admin.Controllers
         {
             return View();
         }
-        
+
+        public ActionResult Logout()
+        {
+            Session[ConstantsCommon.USER_SESSION] = null;
+            return Redirect("/admin/login");
+
+        }
+
         public ActionResult Login(LoginModel loginModel)
         {
             if (ModelState.IsValid)
